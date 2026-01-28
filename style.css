@@ -17,7 +17,7 @@ body {
 .wrapper {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 24px;
 }
 
 a {
@@ -355,19 +355,22 @@ margin: 40px 0;
 
 .skill-list {
     list-style: none;
-    margin-top: 15px;
+    text-align: left;
+    max-width: 300px;
+    margin: 24px;
 }
 
 .skill-list li {
     margin-bottom: 8px;
-    padding-left: 1.5em;
+    padding-left: 2em;
+    line-height: 1.8;
     position: relative;
 }
 
 .skill-list li::before {
     content: "✔";
     position: absolute;
-    left: 95px;
+    left: 0;
     color: #4caf50;
 }
 
@@ -375,7 +378,8 @@ margin: 40px 0;
     background-color: #F2F8FE;
     border-radius: 12px;
     max-width: 450px;
-    margin: 0 auto;
+     margin: 80px auto 0;
+    padding: 48px 40px;
 }
 
 .next-skills h4 {
@@ -393,17 +397,18 @@ margin-bottom: 20px;
 
 .next-skill-list {
     margin: 0 auto;
-    padding-left: 65px;
+    justify-content: center;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-   
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+   gap: 20px;
 }
 
 .skill-item {
     font-size: 1rem;
     font-weight: bold;
-    width: 110px;
+    width: auto;
     height: 40px;
+    padding: 10px 20px;
     background-color: #fff;
     color: #333;
     border-radius: 50px;
@@ -501,7 +506,10 @@ small {
 
 /* レスポンシブ */
 
-@media screen and (max-width: 834px){
+@media screen and (max-width: 768px){
+.wrapper {
+    padding: 0 16px;
+}
 
 /* header */
 
@@ -649,7 +657,8 @@ margin-bottom: 50px;
 
 .skill-card,
 .card {
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
 }
 
 .next-skills {
@@ -660,6 +669,9 @@ margin-bottom: 50px;
 .next-skill-list {
     padding-left: 0;
     justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
 }
 
 /* お問い合わせ */
@@ -690,4 +702,5 @@ border-radius: 6px;
 .contact-btn {
     display: block;
     margin: 32px auto 0;
+}
 }
