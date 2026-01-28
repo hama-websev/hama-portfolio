@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-size: 1rem;
     font-family: 'Hiragino Sans', 'ヒラギノ角ゴ ProN', sans-serif;
@@ -289,6 +293,7 @@ color: #333;
 
 .items {
     flex: 1;
+    overflow: hidden;
 }
 
 .items img:hover {
@@ -650,6 +655,11 @@ margin-bottom: 50px;
 .next-skills {
     max-width: 420px;
     margin: 40px auto 0;
+}
+
+.next-skill-list {
+    padding-left: 0;
+    justify-content: center;
 }
 
 /* お問い合わせ */
